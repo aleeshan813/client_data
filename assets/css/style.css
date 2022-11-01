@@ -924,7 +924,7 @@ h6 {
   margin-left: 95px;
 }
 
-/* Recent Sales */
+/*  Client Drtails Table */
 .dashboard .recent-sales {
   font-size: 14px;
 }
@@ -944,7 +944,57 @@ h6 {
 .dashboard .recent-sales .dataTable-bottom {
   padding: 10px 0 0 0;
 }
+.no-row
+{
+  border: white;
+  font-weight: bolder;
+  text-align: center; 
+  width: 20px;
+  height: 50px;
+}
+.client-name
+{
+  border: white;
+  text-align: center;
+  height: 50px;
+}
+.client-project
+{
+  border: white;
+  text-align: center;
+  width: 400px;
+  height: 50px;
+}
+.about-project
+{
+  border: white;
+  text-align: center;
 
+}
+.project-team
+{
+  border: white;
+  text-align: center;
+
+}
+.start-date
+{
+  font-style: italic;
+  text-align: center;
+  text-align: center;
+}
+.end-date
+{
+  font-style: italic;
+  text-align: center;
+  text-align: center;
+}
+ .domain-expairy
+ {
+  font-style: italic;
+  text-align: center;
+  text-align: center;
+}
 /* Top Selling */
 .dashboard .top-selling {
   font-size: 14px;
@@ -1251,3 +1301,26 @@ h6 {
   font-size: 13px;
   color: #012970;
 }
+
+/* footer-view-table */
+
+.footer-view-table
+
+  {
+    padding: 20px 0;
+    font-size: 14px;
+    transition: all 0.3s;
+    border-top: 1px solid #cddfff;
+  }
+  
+  .footer-view-table .copyright {
+    text-align: center;
+    color: #012970;
+  }
+  
+  .footer-view-table .credits {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 13px;
+    color: #012970;
+  }
