@@ -49,13 +49,17 @@
 
               <div class="card mb-3">
 
-                <div class="card-body">
+                <div class="p-1">
+                  <a href="view_table.php"><img src="assets/img/back-icon.png" alt="back" style="width: auto; height: 20px;"></a>
+              </div>
 
+                <div class="card-body">
+                 
                   <div class="pt-4 pb-2">
                     <h5 class="card-title text-center pb-0 fs-4">Client Details</h5>
                   </div>
 
-                  <form class="row g-3 needs-validation" action="" method="post" novalidate>
+                  <form class="row g-3 needs-validation" action="action/client_data_insert.php" method="post" novalidate>
 
                     <div class="col-12">
                       <label for="Clientname" class="form-label">Client Name</label>
@@ -77,7 +81,7 @@
                     </div>
 
                     <div class="col-12">
-                      <label for="aproject" class="form-label">Project Theam</label>
+                      <label for="ptheam" class="form-label">Project Theam</label>
                       <textarea name="ptheam" id="ptheam" cols="30" rows="2" class="form-control"></textarea>
                     </div>
 
@@ -106,9 +110,9 @@
                     </div>
 
                     <div class="col-12">
-                      <label for="Clientname" class="form-label">Domain Expiry</label>
+                      <label for="domainexpiry" class="form-label">Domain Expiry</label>
                       <div class="input-group has-validation">
-                        <input type="date" name="edate" class="form-control" id="startdate" required>
+                        <input type="date" name="dexpiry" class="form-control" id="domainexpiry" required>
                         <div class="invalid-feedback">Please enter expiry date</div>
                       </div>
                     </div>
