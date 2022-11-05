@@ -128,7 +128,7 @@
                         die("Sorry,there is an error");
                     }
                 
-                    $obj->db_select_view();
+                    $obj->db_select_client_details();
                     $res = $obj->db_execute();
                     while($row = mysqli_fetch_array($res))
                     {
@@ -144,8 +144,8 @@
                       <td><?php echo $row[6] ?></td>
                       <td><?php echo $row[7] ?></td>
                       <td><?php echo $row[8] ?></td>
-                      <td><a href="fetch.php?fetchid=<?php echo $row[0] ?>"><img src="assets/img/update-icon.png" alt="" style="width: auto; height: 20px;"></a></td>
-                      <td><a href="delete.php?deleteid=<?php echo $row[0] ?>"><img src="assets/img/delete-icon.png" alt="" style="width: auto; height: 20px;"></a></td>
+                      <td><a href="fetch_client_data.php?fetchid=<?php echo $row[0] ?>"><img src="assets/img/update-icon.png" alt="" style="width: auto; height: 20px;"></a></td>
+                      <td><a href="action/client_data_delete.php?deleteid=<?php echo $row[0] ?>"><img src="assets/img/delete-icon.jfif" alt="" style="width: auto; height: 20px;"></a></td>
                     </tr>
 
                     <?php
