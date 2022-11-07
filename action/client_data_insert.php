@@ -17,7 +17,7 @@
         die("error");
     }
 
-    $obj->tb_insert_client_details($Client_Name,$Client_Project,$About_Project,$Project_Theam,$Start_Date,$End_Date,$Domain_Name,$Domain_Expiry);
+    $obj->db_insert_client_details($Client_Name,$Client_Project,$About_Project,$Project_Theam,$Start_Date,$End_Date,$Domain_Name,$Domain_Expiry);
     $res = $obj->db_execute();
     if($res == 1)
     {
