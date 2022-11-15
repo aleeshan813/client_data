@@ -53,14 +53,19 @@
             $this->sql = "UPDATE `tb_client_details` SET `client_name` = '$this->client_name', `client_project` = '$this->client_project',
                 `about_project` = '$this->about_project', `project_theam` = '$this->project_theam',
                 `start_date` = '$this->start_date', `end_date` = '$this->end_date', `domain_name` = '$this->domain_name',
-                `domain_expiry` = ' $this->domain_expiry' WHERE `id`='$this->updateid'";
+                `domain_expiry` = ' $this->domain_expiry' WHERE `id` = '$this->updateid'";
 
         }
         function db_delete_client_details($deleteid)
         {
             $this->deleteid = $deleteid;
-            $this->sql = "DELETE FROM `tb_client_details` WHERE `id`='$this->deleteid' ";
+            $this->sql = "DELETE FROM `tb_client_details` WHERE `id` = '$this->deleteid' ";
 
+        }
+        function db_selected_client_data($view_data)
+        {
+            $this->view_data =  $view_data;
+            $this->sql = "SELECT * FROM `tb_client_details` WHERE `id`='$this->view_data' ";
         }
         
     }
