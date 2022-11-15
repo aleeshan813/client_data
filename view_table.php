@@ -83,9 +83,14 @@
         </ol>
       </nav>
       <div class="p-2">
-        <div class="col-12">
+            
+        <div class="p-1" role="group" aria-label="Basic example">
           <a href="add_client.html"><button class="btn btn-primary w-30 p-2" type="submit">Add Details</button></a>
+          <a href="select_client.php"><button class="btn btn-success w-30 p-2" type="submit">Select Client</button></a>
+        </div>
+
       </div>
+
     </div><!-- End Page Title -->
     
     <section class="section">
@@ -108,31 +113,33 @@
                     <th scope="col">End Date</th>
                     <th scope="col">Domain Name</th>
                     <th scope="col">Domain Expiry</th>
-                    <th scope="col" colspan="2"><div class="col-12">
-                      <div class="col-12">
-                        <a href="add_client.html"><button class="btn btn-primary w-10 p-1" type="submit">Add Details</button></a>
-                       </div>
+                    <th scope="col" colspan="2">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                         <button class="btn btn-primary" type="submit"><a href="add_client.html" style="color:white;">Add</a></button>
+                         <button class="btn btn-success" type="submit"><a href="select_client.php" style="color:white;">Select</a></button>
+                        </div>
                     </th>
                   </tr>
                 </thead>
 
                 <tbody>
+
                     <?php
-                    include('action/config.php');
-                
-                    $obj = new config();//object creation
-                
-                    $conn = $obj->db_connection();
-                    if($conn == false)
-                    {
-                        die("Sorry,there is an error");
-                    }
-                
-                    $obj->db_select_client_details();
-                    $res = $obj->db_execute();
-                    while($row = mysqli_fetch_array($res))
-                    {
-                ?>
+                      include('action/config.php');
+                  
+                      $obj = new config();//object creation
+                  
+                      $conn = $obj->db_connection();
+                      if($conn == false)
+                      {
+                          die("Sorry,there is an error");
+                      }
+                  
+                      $obj->db_select_client_details();
+                      $res = $obj->db_execute();
+                      while($row = mysqli_fetch_array($res))
+                      {
+                   ?>
 
                     <tr>
                       <th scope="row"><?php echo $row[0] ?></th>
